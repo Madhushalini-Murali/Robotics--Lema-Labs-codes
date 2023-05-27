@@ -1,0 +1,1 @@
+comp.o: comp.c

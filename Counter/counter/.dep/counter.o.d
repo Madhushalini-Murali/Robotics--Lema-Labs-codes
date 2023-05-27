@@ -1,0 +1,1 @@
+counter.o: counter.c

@@ -1,0 +1,49 @@
+   1               		.file	"switch.c"
+   2               	__SREG__ = 0x3f
+   3               	__SP_H__ = 0x3e
+   4               	__SP_L__ = 0x3d
+   5               	__CCP__  = 0x34
+   6               	__tmp_reg__ = 0
+   7               	__zero_reg__ = 1
+  15               	.Ltext0:
+  16               	.global	main
+  18               	main:
+  19               	.LFB6:
+  20               	.LM1:
+  21               	/* prologue: function */
+  22               	/* frame size = 0 */
+  23               	.LM2:
+  24 0000 11BA      		out 49-32,__zero_reg__
+  25               	.LM3:
+  26 0002 8FEF      		ldi r24,lo8(-1)
+  27 0004 8ABB      		out 58-32,r24
+  28               	.LM4:
+  29 0006 82BB      		out 50-32,r24
+  30               	.LM5:
+  31 0008 91E0      		ldi r25,lo8(1)
+  32               	.L5:
+  33               	.LM6:
+  34 000a 80B3      		in r24,48-32
+  35               	.LM7:
+  36 000c 8E3F      		cpi r24,lo8(-2)
+  37 000e 01F4      		brne .L2
+  38               	.LM8:
+  39 0010 1BBA      		out 59-32,__zero_reg__
+  40 0012 00C0      		rjmp .L5
+  41               	.L2:
+  42               	.LM9:
+  43 0014 9BBB      		out 59-32,r25
+  44 0016 00C0      		rjmp .L5
+  45               	.LFE6:
+  71               	.Letext0:
+DEFINED SYMBOLS
+                            *ABS*:00000000 switch.c
+C:\Users\Balu\AppData\Local\Temp/cccaBAoa.s:2      *ABS*:0000003f __SREG__
+C:\Users\Balu\AppData\Local\Temp/cccaBAoa.s:3      *ABS*:0000003e __SP_H__
+C:\Users\Balu\AppData\Local\Temp/cccaBAoa.s:4      *ABS*:0000003d __SP_L__
+C:\Users\Balu\AppData\Local\Temp/cccaBAoa.s:5      *ABS*:00000034 __CCP__
+C:\Users\Balu\AppData\Local\Temp/cccaBAoa.s:6      *ABS*:00000000 __tmp_reg__
+C:\Users\Balu\AppData\Local\Temp/cccaBAoa.s:7      *ABS*:00000001 __zero_reg__
+C:\Users\Balu\AppData\Local\Temp/cccaBAoa.s:18     .text:00000000 main
+
+NO UNDEFINED SYMBOLS
